@@ -12,7 +12,6 @@ yarn install
 ### To Use
 
 ```
-- yarn install
 - yarn start
 ```
 
