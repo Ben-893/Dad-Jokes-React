@@ -5,8 +5,8 @@ This is a multi-page web app I built using React that allows the user to click a
 ### To Install
 
 ```
-git clone https://github.com/Ben-893/Dad-Jokes-React && cd Dad-Jokes-React
-yarn install
+- git clone https://github.com/Ben-893/Dad-Jokes-React && cd Dad-Jokes-React
+- yarn install
 ```
 
 ### To Use
