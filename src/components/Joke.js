@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import sound from '../laughter.mp3';
 
 export default function Joke() {
   const [joke, setJoke] = useState("");
@@ -12,6 +13,16 @@ export default function Joke() {
       .then((res) => setJoke(res.data))
       .catch((err) => console.log(err));
   }, []);
+
+  const handleClick = () => {
+    fetchJoke();
+    playSound();
+  };
+
+  const playSound = () => {
+    let audio = new Audio(sound)
+    audio.play()
+  }
 
   const fetchJoke = () => {
     axios
@@ -28,9 +39,9 @@ export default function Joke() {
         <div className="card-header">Dad Joke</div>
         <div className="card-body">
           <p className="card-text">{joke.joke}</p>
-          <a className="btn btn-primary text-white" onClick={fetchJoke}>
+          <button className="btn btn-primary text-white" onClick={handleClick}>
             Get Another Joke
-          </a>
+          </button>
         </div>
       </div>
     </div>
